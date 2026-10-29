@@ -287,9 +287,43 @@
     : null;
   const toolbarMode = script?.dataset.toolbarMode;
   const toolbarPlacement = script?.dataset.toolbarPlacement;
+  const toolbarStyle = script?.dataset.toolbarStyle || "portfolio";
+  const toolbarThemes = {
+    portfolio: {
+      surface: "#fbfcfa", ink: "#202b2a", accent: "#176b68", border: "#d7dfdb",
+      hover: "#eef4f1", focus: "#b84d37", bar: "transparent", barBorder: "transparent",
+      radius: "7px", font: '"Avenir Next", Avenir, "Segoe UI", sans-serif'
+    },
+    zingen: {
+      surface: "#18181b", ink: "#f4f4f5", accent: "#f7b733", border: "#3f3f46",
+      hover: "#27272a", focus: "#fc4a1a", bar: "#09090b", barBorder: "#27272a",
+      radius: "6px", font: "Inter, system-ui, sans-serif"
+    },
+    news: {
+      surface: "#16233c", ink: "#f1f5f9", accent: "#60a5fa", border: "#334155",
+      hover: "#1e293b", focus: "#60a5fa", bar: "#0f172a", barBorder: "#1e29eb",
+      radius: "4px", font: "Archivo, sans-serif"
+    },
+    recipe: {
+      surface: "#f7f0ce", ink: "#291b1a", accent: "#573a37", border: "#d8c99a",
+      hover: "#e8ddb0", focus: "#b84d37", bar: "#f0e8c2", barBorder: "#d8c99a",
+      radius: "8px", font: "Alice, Georgia, serif"
+    },
+    travel: {
+      surface: "#ffffff", ink: "#1f2232", accent: "#ef5f4c", border: "rgba(239, 95, 76, .28)",
+      hover: "#fde7e1", focus: "#ef5f4c", bar: "transparent", barBorder: "transparent",
+      radius: "999px", font: "Poppins, sans-serif"
+    }
+  };
   const switcher = document.createElement("nav");
   switcher.className = "language-switcher";
+  switcher.dataset.style = toolbarStyle;
   switcher.setAttribute("aria-label", "Idioma / Language");
+
+  const theme = toolbarThemes[toolbarStyle] || toolbarThemes.portfolio;
+  for (const [name, value] of Object.entries(theme)) {
+    switcher.style.setProperty(`--toolbar-${name}`, value);
+  }
 
   if (homeUrl) {
     const homeLink = document.createElement("a");
@@ -315,7 +349,14 @@
       display: inline-flex;
       align-items: center;
       gap: 8px;
-      font: 600 12px/1 "Avenir Next", Avenir, "Segoe UI", sans-serif;
+      min-height: 0;
+      margin: 0;
+      padding: 0;
+      border: 0;
+      line-height: 1;
+      color: var(--toolbar-ink);
+      background: var(--toolbar-bar);
+      font: 600 12px/1 var(--toolbar-font);
     }
     .language-switcher--row {
       display: flex;
@@ -325,7 +366,7 @@
       min-height: 48px;
       justify-content: flex-end;
       padding: 5px clamp(16px, 4vw, 36px);
-      border-bottom: 1px solid rgba(32, 43, 42, .1);
+      border-bottom: 1px solid var(--toolbar-bar-border);
     }
     .language-switcher--embedded {
       vertical-align: middle;
@@ -335,16 +376,16 @@
       align-items: center;
       min-height: 38px;
       padding: 0 10px;
-      border: 1px solid rgba(32, 43, 42, .18);
-      border-radius: 7px;
-      color: #176b68;
-      background: #fbfcfa;
+      border: 1px solid var(--toolbar-border);
+      border-radius: var(--toolbar-radius);
+      color: var(--toolbar-accent);
+      background: var(--toolbar-surface);
       text-decoration: none;
       white-space: nowrap;
     }
     .language-switcher a:hover {
-      color: #b84d37;
-      background: #fff;
+      color: var(--toolbar-accent);
+      background: var(--toolbar-hover);
     }
     .language-switcher select {
       width: auto;
@@ -352,11 +393,11 @@
       flex: 0 0 auto;
       min-height: 36px;
       padding: 0 32px 0 12px;
-      border: 1px solid rgba(32, 43, 42, .18);
-      border-radius: 7px;
-      color: #202b2a;
-      background-color: #fbfcfa;
-      background-image: linear-gradient(45deg, transparent 50%, #40504d 50%), linear-gradient(135deg, #40504d 50%, transparent 50%);
+      border: 1px solid var(--toolbar-border);
+      border-radius: var(--toolbar-radius);
+      color: var(--toolbar-ink);
+      background-color: var(--toolbar-surface);
+      background-image: linear-gradient(45deg, transparent 50%, var(--toolbar-accent) 50%), linear-gradient(135deg, var(--toolbar-accent) 50%, transparent 50%);
       background-position: calc(100% - 13px) 16px, calc(100% - 8px) 16px;
       background-repeat: no-repeat;
       background-size: 5px 5px, 5px 5px;
@@ -366,7 +407,7 @@
     }
     .language-switcher select:focus-visible,
     .language-switcher a:focus-visible {
-      outline: 2px solid #b84d37;
+      outline: 2px solid var(--toolbar-focus);
       outline-offset: 3px;
     }
     @media (max-width: 420px) {
