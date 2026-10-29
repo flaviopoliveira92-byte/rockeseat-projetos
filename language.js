@@ -446,6 +446,20 @@
       }
     }
   `;
+  if (toolbarStyle === "zingen") {
+    styles.textContent += `
+      @media (width < 80em) {
+        header > .container nav {
+          flex-wrap: wrap;
+          row-gap: 12px;
+        }
+        header > .container nav > .language-switcher {
+          flex: 1 0 100%;
+          justify-content: flex-end;
+        }
+      }
+    `;
+  }
   document.head.append(styles);
   if (toolbarTarget) {
     switcher.classList.add(toolbarMode === "row" ? "language-switcher--row" : "language-switcher--embedded");
