@@ -1,0 +1,27 @@
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  line-height: 0;
+  padding: 28px 0;
+}
+#logo img {
+  height: 42px;
+  width: auto;
+}
+nav ul {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  padding-block: 8px;
+}
+nav ul li:last-child img {
+  width: 40px;
+  height: 40px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+nav {
+  border-bottom: 1px solid rgba(31, 34, 50, 0.08);
+}

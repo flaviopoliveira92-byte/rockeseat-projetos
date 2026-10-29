@@ -1,0 +1,28 @@
+#smartphones-img {
+  margin-top: 5rem;
+  min-height: 26.75rem;
+  background: url("../Assets/Icons/Ilustration.svg") no-repeat top / cover;
+}
+
+section header strong {
+  display: block;
+  font: var(--fw-md) var(--fs-sm) / 1 var(--ff-sans);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--brand-color-primary);
+}
+
+section header h2 {
+  margin-top: 0.5rem;
+}
+
+section p {
+  margin-top: 0.5rem;
+  color: var(--text-color-secondary);
+}
+
+@media (width >= 80em) {
+  #smartphones-img {
+    display: none;
+  }
+}
