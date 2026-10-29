@@ -282,6 +282,11 @@
   const translatableAttributes = ["alt", "title", "placeholder", "aria-label", "content", "value"];
   const script = document.currentScript;
   const homeUrl = script?.dataset.homeUrl;
+  const toolbarTarget = script?.dataset.toolbarTarget
+    ? document.querySelector(script.dataset.toolbarTarget)
+    : null;
+  const toolbarMode = script?.dataset.toolbarMode;
+  const toolbarPlacement = script?.dataset.toolbarPlacement;
   const switcher = document.createElement("nav");
   switcher.className = "language-switcher";
   switcher.setAttribute("aria-label", "Idioma / Language");
@@ -307,15 +312,23 @@
   const styles = document.createElement("style");
   styles.textContent = `
     .language-switcher {
-      position: relative;
-      z-index: 9999;
-      display: flex;
+      display: inline-flex;
       align-items: center;
-      justify-content: flex-end;
-      gap: 12px;
-      min-height: 60px;
-      padding: 8px clamp(16px, 4vw, 36px);
+      gap: 8px;
       font: 600 12px/1 "Avenir Next", Avenir, "Segoe UI", sans-serif;
+    }
+    .language-switcher--row {
+      display: flex;
+      width: 100%;
+      box-sizing: border-box;
+      grid-column: 1 / -1;
+      min-height: 48px;
+      justify-content: flex-end;
+      padding: 5px clamp(16px, 4vw, 36px);
+      border-bottom: 1px solid rgba(32, 43, 42, .1);
+    }
+    .language-switcher--embedded {
+      vertical-align: middle;
     }
     .language-switcher a {
       display: inline-flex;
@@ -334,8 +347,10 @@
       background: #fff;
     }
     .language-switcher select {
-      min-width: 142px;
-      min-height: 38px;
+      width: auto;
+      min-width: 132px;
+      flex: 0 0 auto;
+      min-height: 36px;
       padding: 0 32px 0 12px;
       border: 1px solid rgba(32, 43, 42, .18);
       border-radius: 7px;
@@ -356,20 +371,47 @@
     }
     @media (max-width: 420px) {
       .language-switcher {
-        gap: 8px;
+        gap: 6px;
+      }
+      .language-switcher--row {
+        min-height: 44px;
         padding-inline: 12px;
       }
       .language-switcher select {
-        min-width: 132px;
+        min-width: 116px;
+        min-height: 34px;
         font-size: 11px;
       }
       .language-switcher a {
+        min-height: 34px;
+        padding-inline: 8px;
         font-size: 11px;
+      }
+      .site-nav .language-switcher select {
+        min-width: 108px;
+      }
+    }
+    @media (max-width: 560px) {
+      .bg-surface-color nav.container {
+        flex-wrap: wrap;
+      }
+      .bg-surface-color nav.container > .language-switcher--embedded {
+        flex: 0 0 100%;
+        width: 100%;
+        justify-content: flex-end;
+        box-sizing: border-box;
+        padding: 8px 0;
+        border-top: 1px solid rgba(31, 34, 50, .08);
       }
     }
   `;
   document.head.append(styles);
-  document.body.prepend(switcher);
+  if (toolbarTarget) {
+    switcher.classList.add(toolbarMode === "row" ? "language-switcher--row" : "language-switcher--embedded");
+    toolbarTarget[toolbarPlacement === "prepend" ? "prepend" : "append"](switcher);
+  } else {
+    document.body.prepend(switcher);
+  }
 
   function setLanguage(language, persist) {
     const english = language === "en";
