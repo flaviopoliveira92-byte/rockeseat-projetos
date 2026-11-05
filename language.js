@@ -12,7 +12,9 @@
     "Ideias digitais,": "Digital ideas,",
     "feitas para explorar.": "made to explore.",
     "Uma seleção de interfaces e experiências que venho construindo enquanto aprendo e pratico desenvolvimento front-end.": "A selection of interfaces and experiences I've been building as I learn and practice front-end development.",
-    "Quatro projetos publicados": "Four published projects",
+    "Seis projetos publicados": "Six published projects",
+    "Explorar projetos": "Explore projects",
+    "Acompanhe no GitHub": "Follow on GitHub",
     "projetos": "projects",
     "publicados": "published",
     "Trabalhos selecionados": "Selected work",
@@ -34,6 +36,14 @@
     "Vista de um lago alpino a partir de um barco": "An alpine lake seen from a boat",
     "Viagens": "Travel",
     "Um perfil de viagens com histórias e paisagens pelo caminho.": "A travel profile filled with stories and scenery along the way.",
+    "Ilustração do formulário de matrícula Estrelas do Amanhã": "Illustration of the Tomorrow's Stars enrollment form",
+    "Formulário": "Form",
+    "Matrículas Estrelas do Amanhã": "Tomorrow's Stars enrollment",
+    "Formulário de matrícula escolar com campos para dados da criança, endereço e responsáveis.": "A school enrollment form for student, address, and guardian details.",
+    "Patins da landing page animada Snitap": "Skates from the animated Snitap landing page",
+    "Landing page animada": "Animated landing page",
+    "Snitap: patins em movimento": "Snitap: skates in motion",
+    "Landing page de patins com animações, chamadas para ação e galeria de fotos.": "A skate landing page with animations, calls to action, and a photo gallery.",
     "Ver perfil no GitHub ↗": "View GitHub profile ↗",
 
     "Conheça o App": "Discover the app",
@@ -290,8 +300,8 @@
   const toolbarStyle = script?.dataset.toolbarStyle || "portfolio";
   const toolbarThemes = {
     portfolio: {
-      surface: "#fbfcfa", ink: "#202b2a", accent: "#176b68", border: "#d7dfdb",
-      hover: "#eef4f1", focus: "#b84d37", bar: "transparent", barBorder: "transparent",
+      surface: "#101923", ink: "#eef4f3", accent: "#55e5ff", border: "rgba(165, 190, 207, .2)",
+      hover: "#172633", focus: "#b7ff5a", bar: "transparent", barBorder: "transparent",
       radius: "7px", font: '"Avenir Next", Avenir, "Segoe UI", sans-serif'
     },
     zingen: {
