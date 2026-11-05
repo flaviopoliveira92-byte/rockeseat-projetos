@@ -1,0 +1,80 @@
+window.portfolioProjects = Object.freeze([
+  {
+    id: 1,
+    category: "Landing page",
+    categoryEn: "Landing page",
+    title: "Uma experiência para cantar junto",
+    titleEn: "An experience made for singing together",
+    description: "Apresentação de um aplicativo de música e karaokê.",
+    descriptionEn: "A landing page for a music and karaoke app.",
+    image: "./LANDING%20PAGE%20DE%20APP/Assets/LP%20de%20produto%20(Community)/App%20mockups.png",
+    imageAlt: "Mockups de um aplicativo de karaokê em dois celulares",
+    imageAltEn: "Karaoke app mockups on two phones",
+    href: "./LANDING%20PAGE%20DE%20APP/"
+  },
+  {
+    id: 2,
+    category: "Editorial",
+    categoryEn: "Editorial",
+    title: "Portal de notícias",
+    titleEn: "News portal",
+    description: "Uma página editorial para ler sobre tecnologia e inovação.",
+    descriptionEn: "An editorial page for technology and innovation stories.",
+    image: "./PORTAL%20DE%20NOTICIAS/assets/Images/Image%2001.png",
+    imageAlt: "Robô doméstico em um quarto, imagem de destaque do portal de notícias",
+    imageAltEn: "A home robot in a bedroom, featured on the news portal",
+    href: "./PORTAL%20DE%20NOTICIAS/"
+  },
+  {
+    id: 3,
+    category: "Receita",
+    categoryEn: "Recipe",
+    title: "Projeto receitas",
+    titleEn: "Recipe project",
+    description: "Receita de cupcake com ingredientes e modo de preparo.",
+    descriptionEn: "A cupcake recipe with ingredients and instructions.",
+    image: "./PROJETO%20RECEITAS/assets/main-image.jpg",
+    imageAlt: "Cupcakes de chocolate com cobertura",
+    imageAltEn: "Chocolate cupcakes with frosting",
+    href: "./PROJETO%20RECEITAS/"
+  },
+  {
+    id: 4,
+    category: "Viagens",
+    categoryEn: "Travel",
+    title: "Travelgram",
+    titleEn: "Travelgram",
+    description: "Um perfil de viagens com histórias e paisagens pelo caminho.",
+    descriptionEn: "A travel profile filled with stories and scenery along the way.",
+    image: "./PROJETO%20VIAGENS/assets/perfil-de-viagens/imagens/Image%2001.png",
+    imageAlt: "Vista de um lago alpino a partir de um barco",
+    imageAltEn: "An alpine lake seen from a boat",
+    href: "./PROJETO%20VIAGENS/"
+  },
+  {
+    id: 5,
+    category: "Formulário",
+    categoryEn: "Form",
+    title: "Matrículas Estrelas do Amanhã",
+    titleEn: "Tomorrow's Stars enrollment",
+    description: "Formulário de matrícula escolar com campos para dados da criança, endereço e responsáveis.",
+    descriptionEn: "A school enrollment form for child, address, and guardian details.",
+    image: "./Formulario%20de%20matriculas/Assets/Illustration.svg",
+    imageAlt: "Ilustração do formulário de matrícula Estrelas do Amanhã",
+    imageAltEn: "Illustration of the Tomorrow's Stars enrollment form",
+    href: "./Formulario%20de%20matriculas/"
+  },
+  {
+    id: 6,
+    category: "Landing page animada",
+    categoryEn: "Animated landing page",
+    title: "Snitap: patins em movimento",
+    titleEn: "Snitap: skating in motion",
+    description: "Landing page de patins com animações, chamadas para ação e galeria de fotos.",
+    descriptionEn: "An animated skating landing page with calls to action and a photo gallery.",
+    image: "./LP%20de%20patins%20animada/assets/hero/patins-image.png",
+    imageAlt: "Patins da landing page animada Snitap",
+    imageAltEn: "Skates from the Snitap animated landing page",
+    href: "./LP%20de%20patins%20animada/"
+  }
+]);
