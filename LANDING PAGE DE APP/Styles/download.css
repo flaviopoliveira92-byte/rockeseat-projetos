@@ -15,6 +15,13 @@
   margin-top: 2rem;
 }
 
+@media (max-width: 479px) {
+  #download .card > img {
+    right: 0;
+    width: min(14.5em, 100%);
+  }
+}
+
 @media (width >= 80em) {
   #download .card {
     padding: 8.75em 5em;

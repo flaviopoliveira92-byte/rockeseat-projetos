@@ -181,7 +181,12 @@
     updateCategoryOptions();
   };
 
-  const bookWidth = () => Math.min(900, Math.max(220, Math.floor(bookElement.parentElement.clientWidth)));
+  const bookWidth = () => {
+    const stage = bookElement.parentElement;
+    const style = window.getComputedStyle(stage);
+    const horizontalPadding = Number.parseFloat(style.paddingLeft) + Number.parseFloat(style.paddingRight);
+    return Math.min(900, Math.max(220, Math.floor(stage.clientWidth - horizontalPadding)));
+  };
   const bookHeight = () => Math.min(
     600,
     Math.round(window.innerHeight * 0.72),

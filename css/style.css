@@ -962,6 +962,12 @@
       }
 
       @media (max-width: 380px) {
+        .site-header,
+        main,
+        .site-footer {
+          width: min(100% - 24px, 480px);
+        }
+
         .site-header {
           flex-wrap: wrap;
           gap: 12px;
@@ -971,6 +977,14 @@
         .site-nav {
           width: 100%;
           justify-content: flex-end;
+        }
+
+        .catalog {
+          padding: 8px 8px 32px;
+        }
+
+        .catalog-stage {
+          padding: 8px 4px 38px;
         }
       }
 
@@ -1534,6 +1548,39 @@
 
         .catalog-hint {
           display: none;
+        }
+      }
+
+      @media (max-width: 320px) {
+        main {
+          width: min(100% - 16px, 480px);
+        }
+
+        .catalog {
+          padding: 8px 4px 32px;
+        }
+
+        .catalog-topline {
+          flex-wrap: wrap;
+        }
+
+        .catalog-stage {
+          padding: 8px 0 38px;
+        }
+
+        .catalog-controls {
+          gap: 8px;
+        }
+
+        .catalog-controls button {
+          min-height: 36px;
+          padding: 0 4px;
+          font-size: 10px;
+        }
+
+        .catalog-page-indicator {
+          min-width: 76px;
+          letter-spacing: 0;
         }
       }
 

@@ -134,6 +134,11 @@ section.hero {
     align-items: stretch;
     gap: 2rem;
 
+    & .buttons {
+      flex-wrap: wrap;
+      gap: .75rem;
+    }
+
     & h1 {
       font-size: clamp(2.5rem, 10vw, 4rem);
     }
