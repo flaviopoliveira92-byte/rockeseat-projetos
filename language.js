@@ -74,6 +74,27 @@
     "Landing page animada": "Animated landing page",
     "Snitap: patins em movimento": "Snitap: skates in motion",
     "Landing page de patins com animações, chamadas para ação e galeria de fotos.": "A skate landing page with animations, calls to action, and a photo gallery.",
+    "Snitap Patins": "Snitap Skates",
+    "Logo Snitap": "Snitap logo",
+    "Carrinho de Compras": "Shopping bag",
+    "Snitap, Sua vida mais": "Snitap, make life more",
+    "radical": "bold",
+    "divertida": "fun",
+    "saudável": "healthy",
+    "COMPRAR AGORA": "SHOP NOW",
+    "VEJA EM AÇÃO": "SEE IT IN ACTION",
+    "Play": "Play",
+    "Patins Snitap": "Snitap skates",
+    "GALERIA DE FOTOS": "PHOTO GALLERY",
+    "usesnitap por aí": "#usesnitap out there",
+    "© 2026 Snitap. Todos os direitos reservados.": "© 2026 Snitap. All rights reserved.",
+    "Sobre": "About",
+    "Nossas Lojas": "Our stores",
+    "Política de Privacidade": "Privacy policy",
+    "Instagram": "Instagram",
+    "Facebook": "Facebook",
+    "YouTube": "YouTube",
+    "TikTok": "TikTok",
     "Ver perfil no GitHub ↗": "View GitHub profile ↗",
 
     "Conheça o App": "Discover the app",
@@ -353,6 +374,11 @@
       surface: "#ffffff", ink: "#1f2232", accent: "#ef5f4c", border: "rgba(239, 95, 76, .28)",
       hover: "#fde7e1", focus: "#ef5f4c", bar: "transparent", barBorder: "transparent",
       radius: "999px", font: "Poppins, sans-serif"
+    },
+    snitap: {
+      surface: "#ffffff", ink: "#000000", accent: "#000000", border: "rgba(0, 0, 0, .2)",
+      hover: "#fff3c4", focus: "#dba900", bar: "transparent", barBorder: "rgba(0, 0, 0, .12)",
+      radius: "999px", font: '"Montserrat", sans-serif'
     }
   };
   const switcher = document.createElement("nav");
@@ -496,6 +522,23 @@
         header > .container nav > .language-switcher {
           flex: 1 0 100%;
           justify-content: flex-end;
+        }
+      }
+    `;
+  }
+  if (toolbarStyle === "snitap") {
+    styles.textContent += `
+      @media (max-width: 560px) {
+        header.top {
+          flex-wrap: wrap;
+          gap: 8px;
+        }
+        header.top > .language-switcher--embedded {
+          order: 1;
+          flex: 0 0 100%;
+          justify-content: space-between;
+          padding-block: 8px;
+          border-top: 1px solid var(--toolbar-bar-border);
         }
       }
     `;
