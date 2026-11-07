@@ -541,7 +541,7 @@
 
       .project-card:hover {
         z-index: 1;
-        transform: translateY(-4px);
+        transform: none;
         box-shadow: 0 12px 26px rgba(75, 52, 45, .17);
       }
 
@@ -635,7 +635,7 @@
       }
 
       .project-card:hover .project-action span {
-        transform: translate(3px, -2px);
+        transform: translateX(3px);
       }
 
       .catalog-controls {
