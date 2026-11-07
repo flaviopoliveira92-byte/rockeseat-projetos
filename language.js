@@ -349,6 +349,7 @@
   const toolbarMode = script?.dataset.toolbarMode;
   const toolbarPlacement = script?.dataset.toolbarPlacement;
   const toolbarStyle = script?.dataset.toolbarStyle || "portfolio";
+  const toolbarFixed = script?.dataset.toolbarFixed === "true";
   const toolbarThemes = {
     portfolio: {
       surface: "#101923", ink: "#eef4f3", accent: "#55e5ff", border: "rgba(165, 190, 207, .2)",
@@ -502,13 +503,45 @@
       .bg-surface-color nav.container {
         flex-wrap: wrap;
       }
-      .bg-surface-color nav.container > .language-switcher--embedded {
+      .bg-surface-color nav.container > .language-switcher--embedded:not(.language-switcher--fixed) {
         flex: 0 0 100%;
         width: 100%;
         justify-content: flex-end;
         box-sizing: border-box;
         padding: 8px 0;
         border-top: 1px solid rgba(31, 34, 50, .08);
+      }
+    }
+  `;
+  styles.textContent += `
+    @media (max-width: 760px) {
+      .language-switcher--fixed {
+        position: fixed;
+        z-index: 1000;
+        inset: 0 0 auto;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        width: 100%;
+        min-height: 52px;
+        box-sizing: border-box;
+        padding: 7px clamp(16px, 4vw, 36px);
+        border-bottom: 1px solid var(--toolbar-border);
+        background: var(--toolbar-surface);
+        box-shadow: 0 4px 18px rgba(0, 0, 0, .08);
+        backdrop-filter: blur(12px);
+      }
+      body.has-fixed-language-switcher {
+        padding-top: 52px;
+      }
+    }
+    @media (max-width: 420px) {
+      .language-switcher--fixed {
+        min-height: 48px;
+        padding-inline: 12px;
+      }
+      body.has-fixed-language-switcher {
+        padding-top: 48px;
       }
     }
   `;
@@ -533,7 +566,7 @@
           flex-wrap: wrap;
           gap: 8px;
         }
-        header.top > .language-switcher--embedded {
+        header.top > .language-switcher--embedded:not(.language-switcher--fixed) {
           order: 1;
           flex: 0 0 100%;
           justify-content: space-between;
@@ -549,6 +582,22 @@
     toolbarTarget[toolbarPlacement === "prepend" ? "prepend" : "append"](switcher);
   } else {
     document.body.prepend(switcher);
+  }
+  if (toolbarFixed) {
+    const mobileViewport = window.matchMedia("(max-width: 760px)");
+    const updateFixedToolbar = () => {
+      if (toolbarStyle === "news") {
+        if (mobileViewport.matches && switcher.parentElement !== document.body) {
+          document.body.prepend(switcher);
+        } else if (!mobileViewport.matches && switcher.parentElement === document.body && toolbarTarget) {
+          toolbarTarget[toolbarPlacement === "prepend" ? "prepend" : "append"](switcher);
+        }
+      }
+      switcher.classList.toggle("language-switcher--fixed", mobileViewport.matches);
+      document.body.classList.toggle("has-fixed-language-switcher", mobileViewport.matches);
+    };
+    updateFixedToolbar();
+    window.addEventListener("resize", updateFixedToolbar);
   }
 
   function setLanguage(language, persist) {

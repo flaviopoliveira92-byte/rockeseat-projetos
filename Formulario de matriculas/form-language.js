@@ -83,6 +83,7 @@
   const toolbarMode = script?.dataset.toolbarMode;
   const toolbarPlacement = script?.dataset.toolbarPlacement;
   const toolbarStyle = script?.dataset.toolbarStyle || "form";
+  const toolbarFixed = script?.dataset.toolbarFixed === "true";
   const toolbarThemes = {
     form: {
       surface: "#ffffff", ink: "#292524", accent: "#e43a12", border: "#f3b49a",
@@ -120,6 +121,7 @@
 
   const style = document.createElement("style");
   style.textContent = `.language-switcher{display:inline-flex;align-items:center;gap:8px;min-height:0;margin:0;padding:0;border:0;line-height:1;color:var(--toolbar-ink);background:var(--toolbar-bar);font:600 12px/1 var(--toolbar-font)}.language-switcher--row{display:flex;width:100%;box-sizing:border-box;grid-column:1/-1;min-height:48px;justify-content:flex-end;padding:5px clamp(16px,4vw,36px);border-bottom:1px solid var(--toolbar-bar-border)}.language-switcher--embedded{vertical-align:middle}.language-switcher a{display:inline-flex;align-items:center;min-height:38px;padding:0 10px;border:1px solid var(--toolbar-border);border-radius:var(--toolbar-radius);color:var(--toolbar-accent);background:var(--toolbar-surface);text-decoration:none;white-space:nowrap}.language-switcher a:hover{color:var(--toolbar-accent);background:var(--toolbar-hover)}.language-switcher select{width:auto;min-width:132px;flex:0 0 auto;min-height:36px;padding:0 32px 0 12px;border:1px solid var(--toolbar-border);border-radius:var(--toolbar-radius);color:var(--toolbar-ink);background-color:var(--toolbar-surface);background-image:linear-gradient(45deg,transparent 50%,var(--toolbar-accent) 50%),linear-gradient(135deg,var(--toolbar-accent) 50%,transparent 50%);background-position:calc(100% - 13px) 16px,calc(100% - 8px) 16px;background-repeat:no-repeat;background-size:5px 5px,5px 5px;font:inherit;appearance:none;cursor:pointer}.language-switcher select:focus-visible,.language-switcher a:focus-visible{outline:2px solid var(--toolbar-focus);outline-offset:3px}@media(max-width:420px){.language-switcher{gap:6px}.language-switcher--row{min-height:44px;padding-inline:12px}.language-switcher select{min-width:116px;min-height:34px;font-size:11px}.language-switcher a{min-height:34px;padding-inline:8px;font-size:11px}}`;
+  style.textContent += `@media(max-width:760px){.language-switcher--fixed{position:fixed;z-index:1000;inset:0 0 auto;display:flex;align-items:center;justify-content:flex-end;width:100%;min-height:52px;box-sizing:border-box;padding:7px clamp(16px,4vw,36px);border-bottom:1px solid var(--toolbar-border);background:var(--toolbar-surface);box-shadow:0 4px 18px rgba(0,0,0,.08);backdrop-filter:blur(12px)}body.has-fixed-language-switcher{padding-top:52px}}@media(max-width:420px){.language-switcher--fixed{min-height:48px;padding-inline:12px}body.has-fixed-language-switcher{padding-top:48px}}`;
   style.textContent += `.language-switcher--row{box-sizing:border-box;grid-column:1/-1}@media(max-width:560px){.bg-surface-color nav.container{flex-wrap:wrap}.bg-surface-color nav.container>.language-switcher--embedded{flex:0 0 100%;width:100%;justify-content:flex-end;box-sizing:border-box;padding:8px 0;border-top:1px solid rgba(31,34,50,.08)}}`;
   document.head.append(style);
   if (toolbarTarget) {
@@ -127,6 +129,15 @@
     toolbarTarget[toolbarPlacement === "prepend" ? "prepend" : "append"](switcher);
   } else {
     document.body.prepend(switcher);
+  }
+  if (toolbarFixed) {
+    const mobileViewport = window.matchMedia("(max-width: 760px)");
+    const updateFixedToolbar = () => {
+      switcher.classList.toggle("language-switcher--fixed", mobileViewport.matches);
+      document.body.classList.toggle("has-fixed-language-switcher", mobileViewport.matches);
+    };
+    updateFixedToolbar();
+    window.addEventListener("resize", updateFixedToolbar);
   }
 
   function setLanguage(language, persist) {
