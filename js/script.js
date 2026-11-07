@@ -92,7 +92,6 @@
       <p class="page-kicker">${text("about")}</p>
       <h3>Flávio Oliveira</h3>
       <p>${text("aboutText")}</p>
-      <p class="page-page-number">01</p>
     </div>
   `, text("about"));
 
@@ -103,8 +102,10 @@
     const imageAlt = localeValue(project, "imageAlt");
     const projectLink = escapeHtml(project.href);
     const imageLink = escapeHtml(project.image);
+    const pageNumber = String(index + 1).padStart(2, "0");
+    const oddPage = index % 2 === 0;
 
-    return page("page-project", `
+    return page(`page-project${oddPage ? " page-project--odd" : ""}`, `
       <article class="project-card">
         <button class="project-image-button" type="button" aria-label="${escapeHtml(isEnglish() ? `Enlarge image for ${title}` : `Ampliar imagem de ${title}`)}">
           <img class="project-image" src="${imageLink}" alt="${escapeHtml(imageAlt)}" loading="lazy" decoding="async">
@@ -117,12 +118,12 @@
           <h3>${escapeHtml(title)}</h3>
           <p>${escapeHtml(description)}</p>
           <div class="project-actions">
+            <span class="page-page-number">${pageNumber}</span>
             <a class="project-action" href="${projectLink}">${text("viewProject")} <span aria-hidden="true">↗</span></a>
           </div>
         </div>
-        <span class="page-page-number">${String(index + 1).padStart(2, "0")}</span>
       </article>
-    `, `${text("project")} ${String(index + 1).padStart(2, "0")}: ${title}`);
+    `, `${text("project")} ${pageNumber}: ${title}`);
   };
 
   const contactPage = () => page("page-contact", `

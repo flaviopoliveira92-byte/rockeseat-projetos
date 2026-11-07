@@ -10,7 +10,7 @@ window.portfolioProjects = Object.freeze([
     image: "./LANDING%20PAGE%20DE%20APP/Assets/LP%20de%20produto%20(Community)/App%20mockups.png",
     imageAlt: "Mockups de um aplicativo de karaokê em dois celulares",
     imageAltEn: "Karaoke app mockups on two phones",
-    href: "./LANDING%20PAGE%20DE%20APP/"
+    href: "./LANDING%20PAGE%20DE%20APP/index.html"
   },
   {
     id: 2,
@@ -23,7 +23,7 @@ window.portfolioProjects = Object.freeze([
     image: "./PORTAL%20DE%20NOTICIAS/assets/Images/Image%2001.png",
     imageAlt: "Robô doméstico em um quarto, imagem de destaque do portal de notícias",
     imageAltEn: "A home robot in a bedroom, featured on the news portal",
-    href: "./PORTAL%20DE%20NOTICIAS/"
+    href: "./PORTAL%20DE%20NOTICIAS/index.html"
   },
   {
     id: 3,
@@ -36,7 +36,7 @@ window.portfolioProjects = Object.freeze([
     image: "./PROJETO%20RECEITAS/assets/main-image.jpg",
     imageAlt: "Cupcakes de chocolate com cobertura",
     imageAltEn: "Chocolate cupcakes with frosting",
-    href: "./PROJETO%20RECEITAS/"
+    href: "./PROJETO%20RECEITAS/index.html"
   },
   {
     id: 4,
@@ -49,7 +49,7 @@ window.portfolioProjects = Object.freeze([
     image: "./PROJETO%20VIAGENS/assets/perfil-de-viagens/imagens/Image%2001.png",
     imageAlt: "Vista de um lago alpino a partir de um barco",
     imageAltEn: "An alpine lake seen from a boat",
-    href: "./PROJETO%20VIAGENS/"
+    href: "./PROJETO%20VIAGENS/index.html"
   },
   {
     id: 5,
@@ -62,7 +62,7 @@ window.portfolioProjects = Object.freeze([
     image: "./Formulario%20de%20matriculas/Assets/Illustration.svg",
     imageAlt: "Ilustração do formulário de matrícula Estrelas do Amanhã",
     imageAltEn: "Illustration of the Tomorrow's Stars enrollment form",
-    href: "./Formulario%20de%20matriculas/"
+    href: "./Formulario%20de%20matriculas/index.html"
   },
   {
     id: 6,
@@ -75,6 +75,6 @@ window.portfolioProjects = Object.freeze([
     image: "./LP%20de%20patins%20animada/assets/hero/patins-image.png",
     imageAlt: "Patins da landing page animada Snitap",
     imageAltEn: "Skates from the Snitap animated landing page",
-    href: "./LP%20de%20patins%20animada/"
+    href: "./LP%20de%20patins%20animada/index.html"
   }
 ]);

@@ -6,7 +6,22 @@ header.top {
 
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: flex-start;
+  gap: 1rem;
+
+  > a:first-child {
+    order: 0;
+  }
+  > .language-switcher:not(.language-switcher--fixed) {
+    order: 1;
+    margin-left: auto;
+  }
+  > .shopping-bag {
+    order: 2;
+  }
+  > .language-switcher--fixed {
+    margin-left: 0;
+  }
 
   img {
     width: 2rem;

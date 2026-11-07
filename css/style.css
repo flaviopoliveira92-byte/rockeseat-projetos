@@ -1209,6 +1209,66 @@
         padding: 12px;
       }
 
+      @media (min-width: 761px) {
+        .page-project .project-actions .page-page-number,
+        .page-project .project-action {
+          position: absolute;
+          bottom: 12px;
+          margin: 0;
+          padding-top: 0;
+        }
+
+        .page-project.--left .project-actions .page-page-number {
+          right: auto;
+          left: 20px;
+        }
+
+        .page-project.--left .project-action {
+          right: 20px;
+          left: auto;
+        }
+
+        .page-project.--right .project-actions .page-page-number {
+          right: 20px;
+          left: auto;
+        }
+
+        .page-project.--right .project-action {
+          right: auto;
+          left: 20px;
+        }
+      }
+
+      @media (max-width: 760px) {
+        .page-project .project-actions {
+          padding-top: 0;
+        }
+
+        .page-project--odd .project-actions .page-page-number {
+          position: static;
+        }
+
+        .page-project--odd .project-action {
+          position: absolute;
+          right: 20px;
+          bottom: 12px;
+          margin: 0;
+          padding-top: 0;
+        }
+
+        .page-project:not(.page-project--odd) .project-actions .page-page-number {
+          position: absolute;
+          right: 20px;
+          bottom: 12px;
+        }
+
+        .page-project:not(.page-project--odd) .project-action {
+          position: static;
+          margin-top: auto;
+          padding-top: 12px;
+        }
+      }
+
       .project-card {
         display: flex;
         flex-direction: column;
