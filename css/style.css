@@ -1239,36 +1239,6 @@
         }
       }
 
-      @media (max-width: 760px) {
-        .page-project .project-actions {
-          padding-top: 0;
-        }
-
-        .page-project--odd .project-actions .page-page-number {
-          position: static;
-        }
-
-        .page-project--odd .project-action {
-          position: absolute;
-          right: 20px;
-          bottom: 12px;
-          margin: 0;
-          padding-top: 0;
-        }
-
-        .page-project:not(.page-project--odd) .project-actions .page-page-number {
-          position: absolute;
-          right: 20px;
-          bottom: 12px;
-        }
-
-        .page-project:not(.page-project--odd) .project-action {
-          position: static;
-          margin-top: auto;
-          padding-top: 12px;
-        }
-      }
-
       .project-card {
         display: flex;
         flex-direction: column;
@@ -1741,35 +1711,27 @@
         }
 
         .page-project .project-actions {
+          width: 100%;
+          justify-content: space-between;
+          align-items: center;
           padding-top: 0;
         }
 
-        .page-project.--left .project-actions .page-page-number {
-          right: auto;
-          bottom: 8px;
-          left: 10px;
+        .page-project.--left .project-actions {
+          flex-direction: row;
         }
 
-        .page-project.--left .project-action {
-          right: 10px;
-          bottom: 8px;
-          left: auto;
+        .page-project.--right .project-actions {
+          flex-direction: row-reverse;
+        }
+
+        .page-project .project-actions .page-page-number {
+          position: static;
           margin: 0;
-          padding: 0;
-          font-size: 7px;
-          letter-spacing: .04em;
         }
 
-        .page-project.--right .project-actions .page-page-number {
-          right: 10px;
-          bottom: 8px;
-          left: auto;
-        }
-
-        .page-project.--right .project-action {
-          right: auto;
-          bottom: 8px;
-          left: 10px;
+        .page-project .project-action {
+          position: static;
           margin: 0;
           padding: 0;
           font-size: 7px;
