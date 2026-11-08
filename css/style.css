@@ -172,7 +172,7 @@
         font-family: "Avenir Next", Avenir, "Segoe UI", sans-serif;
         font-size: clamp(56px, 6.5vw, 82px);
         font-weight: 700;
-        letter-spacing: -.07em;
+        letter-spacing: -.035em;
         line-height: .98;
       }
 
