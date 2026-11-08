@@ -182,17 +182,27 @@
     updateCategoryOptions();
   };
 
-  const bookWidth = () => {
-    const stage = bookElement.parentElement;
-    const style = window.getComputedStyle(stage);
-    const horizontalPadding = Number.parseFloat(style.paddingLeft) + Number.parseFloat(style.paddingRight);
-    return Math.min(900, Math.max(220, Math.floor(stage.clientWidth - horizontalPadding)));
-  };
-  const bookHeight = () => Math.min(
+  const isMobileViewport = () => window.matchMedia("(max-width: 760px)").matches;
+  const availableBookHeight = () => Math.min(
     600,
     Math.round(window.innerHeight * 0.72),
     Math.max(280, window.innerHeight - 180)
   );
+  const bookWidth = () => {
+    const stage = bookElement.parentElement;
+    const style = window.getComputedStyle(stage);
+    const horizontalPadding = Number.parseFloat(style.paddingLeft) + Number.parseFloat(style.paddingRight);
+    const availableWidth = Math.min(900, Math.max(220, Math.floor(stage.clientWidth - horizontalPadding)));
+    return isMobileViewport()
+      ? Math.min(availableWidth, Math.floor(availableBookHeight() * 1.5))
+      : availableWidth;
+  };
+  const bookHeight = () => {
+    const availableHeight = availableBookHeight();
+    return isMobileViewport()
+      ? Math.min(availableHeight, Math.floor(bookWidth() / 1.5))
+      : availableHeight;
+  };
   let pageCount = 0;
   let pageFlip = null;
 
@@ -290,13 +300,14 @@
       pageFlip.updateFromHtml(pages);
       pageFlip.turnToPage(focusResults ? 2 : 0);
     } else {
+      const mobileViewport = isMobileViewport();
       pageFlip = new PageFlip(bookElement, {
-        width: 450,
+        width: mobileViewport ? Math.floor(width / 2) : 450,
         height,
         size: "stretch",
-        minWidth: 220,
+        minWidth: 120,
         maxWidth: 900,
-        minHeight: 280,
+        minHeight: 140,
         maxHeight: 600,
         autoCenter: true,
         autoSize: true,
@@ -304,7 +315,7 @@
         drawShadow: true,
         maxShadowOpacity: 0.5,
         flippingTime: window.matchMedia("(prefers-reduced-motion: reduce)").matches ? 1 : 900,
-        usePortrait: true,
+        usePortrait: false,
         mobileScrollSupport: false
       });
       pageFlip.on("flip", updateIndicator);

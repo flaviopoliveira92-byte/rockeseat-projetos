@@ -1644,6 +1644,139 @@
         }
       }
 
+      @media (max-width: 760px) {
+        .page-cover,
+        .page-about,
+        .page-contact,
+        .page-back-cover {
+          padding: 14px;
+        }
+
+        .page-kicker,
+        .page-edition {
+          font-size: 7px;
+          letter-spacing: .08em;
+        }
+
+        .page-edition {
+          margin-top: 16px;
+        }
+
+        .page-cover h3,
+        .page-content h3 {
+          margin: 8px 0;
+          font-size: clamp(16px, 5vw, 24px);
+        }
+
+        .page-cover-content > p:not(.page-kicker):not(.page-edition),
+        .page-content > p:not(.page-kicker) {
+          font-size: 10px;
+          line-height: 1.4;
+        }
+
+        .cover-count {
+          margin-top: 12px;
+          padding: 6px 8px;
+          font-size: 8px;
+        }
+
+        .page-empty {
+          padding: 12px;
+          font-size: 12px;
+        }
+
+        .back-mark {
+          width: 36px;
+          margin-bottom: 12px;
+        }
+
+        .page-back-content p {
+          font-size: 18px;
+        }
+
+        .page-back-content a,
+        .page-contact .contact-email {
+          font-size: 9px;
+        }
+
+        .page-contact .contact-whatsapp {
+          font-size: 10px;
+        }
+
+        .page-project {
+          padding: 6px;
+        }
+
+        .project-card {
+          padding: 5px;
+        }
+
+        .project-image-button {
+          flex: 0 0 26%;
+        }
+
+        .project-content {
+          flex: 1;
+          padding: 6px 3px 16px;
+        }
+
+        .project-meta {
+          gap: 4px;
+          font-size: 7px;
+          letter-spacing: .06em;
+        }
+
+        .project-content h3 {
+          margin: 4px 0 3px;
+          font-size: clamp(10px, 2.7vw, 12px);
+        }
+
+        .project-content > p {
+          display: -webkit-box;
+          overflow: hidden;
+          -webkit-box-orient: vertical;
+          -webkit-line-clamp: 3;
+          font-size: 8px;
+          line-height: 1.2;
+        }
+
+        .page-project .project-actions {
+          padding-top: 0;
+        }
+
+        .page-project.--left .project-actions .page-page-number {
+          right: auto;
+          bottom: 8px;
+          left: 10px;
+        }
+
+        .page-project.--left .project-action {
+          right: 10px;
+          bottom: 8px;
+          left: auto;
+          margin: 0;
+          padding: 0;
+          font-size: 7px;
+          letter-spacing: .04em;
+        }
+
+        .page-project.--right .project-actions .page-page-number {
+          right: 10px;
+          bottom: 8px;
+          left: auto;
+        }
+
+        .page-project.--right .project-action {
+          right: auto;
+          bottom: 8px;
+          left: 10px;
+          margin: 0;
+          padding: 0;
+          font-size: 7px;
+          letter-spacing: .04em;
+        }
+      }
+
       @media print {
         body {
           min-width: 0;
