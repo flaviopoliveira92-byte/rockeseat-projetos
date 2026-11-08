@@ -26,8 +26,6 @@
     ],
     viewProject: ["Ver projeto", "View project"],
     contact: ["Vamos conversar?", "Let's talk"],
-    contactText: ["Entre em contato para conversar sobre projetos e desenvolvimento web.", "Get in touch to talk about projects and web development."],
-    whatsapp: ["Conversar pelo WhatsApp", "Chat on WhatsApp"],
     back: ["Obrigado por folhear", "Thanks for browsing"],
     noResults: ["Nenhum projeto encontrado.", "No projects found."],
     resultCount: [(count) => `${count} ${count === 1 ? "projeto encontrado" : "projetos encontrados"}`, (count) => `${count} ${count === 1 ? "project found" : "projects found"}`],
@@ -128,11 +126,11 @@
 
   const contactPage = () => page("page-contact", `
     <div class="page-content">
-      <p class="page-kicker">${text("contact")}</p>
       <h3>${text("contact")}</h3>
-      <p>${text("contactText")}</p>
-      <a class="contact-email" href="mailto:flaviopoliveira92@gmail.com">flaviopoliveira92@gmail.com</a>
-      <a class="contact-whatsapp" href="https://wa.me/${whatsappNumber}" target="_blank" rel="noopener noreferrer">${text("whatsapp")}</a>
+      <div class="contact-links">
+        <a class="contact-email" href="mailto:flaviopoliveira92@gmail.com">flaviopoliveira92@gmail.com</a>
+        <a class="contact-whatsapp" href="https://wa.me/${whatsappNumber}" target="_blank" rel="noopener noreferrer">WhatsApp</a>
+      </div>
     </div>
   `, text("contact"));
 
