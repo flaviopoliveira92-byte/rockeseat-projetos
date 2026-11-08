@@ -1,0 +1,201 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 16px;
+  background: #29292d;
+  color: #292929;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 15px;
+  line-height: 1.45;
+}
+
+.page {
+  width: min(100%, 1120px);
+  margin: 0 auto;
+  padding: 76px 68px 54px;
+  background: #f5f4f0;
+}
+
+.eyebrow {
+  margin: 0 0 5px;
+  color: #e34b38;
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 1.2;
+  text-transform: uppercase;
+}
+
+h1,
+h2,
+h3,
+h4,
+p,
+figure {
+  margin-top: 0;
+}
+
+h1 {
+  margin-bottom: 36px;
+  font-size: clamp(28px, 3vw, 36px);
+  line-height: 1.15;
+}
+
+.cover {
+  margin: 0;
+  padding-bottom: 30px;
+  border-bottom: 1px solid #deddd8;
+}
+
+.cover img,
+.destination > img {
+  display: block;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 22px;
+}
+
+.cover img {
+  aspect-ratio: 16 / 9;
+}
+
+figcaption {
+  max-width: 920px;
+  margin: 18px auto 0;
+  color: #66645f;
+  font-size: 12px;
+  font-style: italic;
+  line-height: 1.45;
+  text-align: center;
+}
+
+.highlights {
+  padding-top: 55px;
+}
+
+.section-heading {
+  margin-bottom: 42px;
+}
+
+h2 {
+  margin-bottom: 10px;
+  font-size: clamp(23px, 2.5vw, 30px);
+  line-height: 1.2;
+}
+
+.section-intro,
+.destination-copy > p,
+.footer > p:first-child {
+  color: #484743;
+  font-size: 14px;
+  line-height: 1.55;
+}
+
+.section-intro {
+  margin-bottom: 0;
+}
+
+.destination {
+  margin-bottom: 42px;
+}
+
+.destination > img {
+  aspect-ratio: 2.65 / 1;
+}
+
+.destination-copy {
+  padding: 17px 8px 0;
+}
+
+h3 {
+  margin-bottom: 5px;
+  font-size: 22px;
+  line-height: 1.25;
+}
+
+.destination-copy > p {
+  margin-bottom: 15px;
+}
+
+h4 {
+  margin-bottom: 3px;
+  font-size: 14px;
+}
+
+.tags {
+  margin: 0;
+  padding-left: 17px;
+  color: #174bb5;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.tags li:nth-child(2) {
+  color: #be2638;
+}
+
+.tags li:nth-child(3) {
+  color: #e14e35;
+}
+
+.footer {
+  padding: 34px 8px 0;
+  border-top: 1px solid #deddd8;
+  text-align: center;
+}
+
+.footer > p:first-child {
+  margin-bottom: 42px;
+}
+
+.signature {
+  margin-bottom: 0;
+  color: #494844;
+  font-family: Georgia, serif;
+  font-size: 13px;
+}
+
+.signature span {
+  color: #292929;
+}
+
+@media (max-width: 640px) {
+  body {
+    padding: 0;
+  }
+
+  .page {
+    padding: 38px 22px 32px;
+  }
+
+  h1 {
+    margin-bottom: 24px;
+  }
+
+  .cover img,
+  .destination > img {
+    border-radius: 14px;
+  }
+
+  .highlights {
+    padding-top: 36px;
+  }
+
+  .section-heading {
+    margin-bottom: 30px;
+  }
+
+  .destination {
+    margin-bottom: 34px;
+  }
+
+  .destination > img {
+    aspect-ratio: 1.8 / 1;
+  }
+
+  h3 {
+    font-size: 19px;
+  }
+}

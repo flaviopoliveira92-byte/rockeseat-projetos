@@ -76,5 +76,18 @@ window.portfolioProjects = Object.freeze([
     imageAlt: "Patins da landing page animada Snitap",
     imageAltEn: "Skates from the Snitap animated landing page",
     href: "./LP%20de%20patins%20animada/index.html"
+  },
+  {
+    id: 7,
+    category: "Turismo",
+    categoryEn: "Travel",
+    title: "Conheça Busan",
+    titleEn: "Discover Busan",
+    description: "Um guia visual por três atrações históricas e culturais de Busan, na Coreia do Sul.",
+    descriptionEn: "A visual guide to three historic and cultural attractions in Busan, South Korea.",
+    image: "./Local%20Tur%C3%ADstico/assets/Images/Image_01.png",
+    imageAlt: "Vista noturna do porto e da ponte iluminada de Busan",
+    imageAltEn: "Busan harbor and illuminated bridge at night",
+    href: "./Local%20Tur%C3%ADstico/Index.html"
   }
 ]);
