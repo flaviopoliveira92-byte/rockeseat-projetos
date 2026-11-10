@@ -58,3 +58,7 @@ Os projetos são páginas estáticas e não precisam de etapa de build. O catál
 [![Prévia do portfólio de Flávio Oliveira — clique para abrir o site](./assets/portfolio-preview.svg)](https://flaviopoliveira92-byte.github.io/rockeseat-projetos/?v=e15a70d)
 
 *Clique na imagem para explorar o catálogo interativo.*
+
+## 🌱 Meu primeiro repositório
+
+Este portfólio marca o início da minha jornada no desenvolvimento front-end. Aqui reúno projetos feitos para aprender, praticar e transformar ideias em experiências web.
