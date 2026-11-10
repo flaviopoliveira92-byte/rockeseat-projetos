@@ -52,3 +52,9 @@ Os projetos são páginas estáticas e não precisam de etapa de build. O catál
 **Flávio Oliveira** · Desenvolvedor front-end em evolução contínua.
 
 [GitHub](https://github.com/flaviopoliveira92-byte) · [Ver portfólio](https://flaviopoliveira92-byte.github.io/rockeseat-projetos/?v=e15a70d)
+
+## 👀 Prévia do portfólio
+
+[![Prévia do portfólio de Flávio Oliveira — clique para abrir o site](./assets/portfolio-preview.svg)](https://flaviopoliveira92-byte.github.io/rockeseat-projetos/?v=e15a70d)
+
+*Clique na imagem para explorar o catálogo interativo.*
