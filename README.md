@@ -1,50 +1,54 @@
-# Portfólio de Projetos — Flávio Oliveira
+<div align="center">
 
-Portfólio com projetos de desenvolvimento front-end criados para praticar e demonstrar a construção de páginas web. A página inicial reúne os trabalhos em um catálogo interativo, com acesso direto a cada projeto.
+# ✦ Flávio Oliveira
+### Portfólio de projetos · Desenvolvimento front-end
 
-## Projetos
+**Ideias digitais, feitas para explorar.**
 
-| Projeto | Descrição |
+Uma coleção de interfaces e experiências web que venho criando enquanto aprendo e pratico desenvolvimento front-end.
+
+[🌐 Explorar meu portfólio](https://flaviopoliveira92-byte.github.io/rockeseat-projetos/?v=e15a70d)
+
+</div>
+
+---
+
+## ✨ Projetos em destaque
+
+| Projeto | O que você vai encontrar |
 | --- | --- |
-| [Zingen — app de música](./LANDING%20PAGE%20DE%20APP/) | Landing page para um aplicativo de música e karaokê. |
-| [Portal de notícias](./PORTAL%20DE%20NOTICIAS/) | Página editorial sobre tecnologia e inovação. |
-| [Projeto receitas](./PROJETO%20RECEITAS/) | Página de receita com ingredientes e modo de preparo. |
-| [Travelgram](./PROJETO%20VIAGENS/) | Perfil de viagens com histórias e paisagens. |
-| [Matrículas Estrelas do Amanhã](./Formulario%20de%20matriculas/) | Formulário de matrícula escolar. |
-| [Snitap — patins em movimento](./LP%20de%20patins%20animada/) | Landing page de patins com animações e galeria. |
-| [Local Turístico — Conheça Busan](./Local%20Tur%C3%ADstico/) | Guia visual de atrações históricas e culturais de Busan, na Coreia do Sul. |
-| [Convite — Festivite](./Convite/) | Crie convites digitais personalizados para celebrar momentos especiais. |
+| [Zingen — app de música](./LANDING%20PAGE%20DE%20APP/) | Uma landing page para um aplicativo de música e karaokê. |
+| [Portal de notícias](./PORTAL%20DE%20NOTICIAS/) | Uma página editorial sobre tecnologia e inovação. |
+| [Projeto receitas](./PROJETO%20RECEITAS/) | Receita apresentada com ingredientes e modo de preparo. |
+| [Travelgram](./PROJETO%20VIAGENS/) | Um perfil de viagens cheio de histórias e paisagens. |
+| [Matrículas Estrelas do Amanhã](./Formulario%20de%20matriculas/) | Formulário de matrícula para uma escola infantil. |
+| [Snitap — patins em movimento](./LP%20de%20patins%20animada/) | Landing page com animações e galeria de patins. |
+| [Local Turístico — Conheça Busan](./Local%20Tur%C3%ADstico/) | Um guia visual de atrações históricas e culturais de Busan. |
+| [Convite — Festivite](./Convite/) | Uma experiência para criar convites digitais personalizados. |
 
-## Recursos do portfólio
+## 🧭 Um portfólio para explorar
 
-- Catálogo interativo com navegação entre páginas.
-- Busca por nome e filtro por categoria.
-- Opções para imprimir ou salvar o catálogo em PDF e compartilhá-lo.
-- Layout adaptável a diferentes tamanhos de tela.
+O catálogo reúne os projetos em uma experiência interativa: dá para folhear as páginas, buscar trabalhos, filtrar por categoria e compartilhar a seleção. Também é possível salvar o catálogo em PDF.
 
-## Tecnologias
+## 🛠️ Tecnologias
 
-- HTML5
-- CSS3
-- JavaScript
+`HTML5` · `CSS3` · `JavaScript`
 
-Os projetos são páginas estáticas e não precisam de um processo de build. O catálogo usa a biblioteca PageFlip, carregada por CDN.
+Os projetos são páginas estáticas e não precisam de etapa de build. O catálogo usa a biblioteca PageFlip, carregada por CDN.
 
-## Como executar
+## 🚀 Abrir localmente
 
-1. Clone o repositório:
+1. Clone este repositório:
 
    ```bash
    git clone https://github.com/flaviopoliveira92-byte/rockeseat-projetos.git
    ```
 
 2. Abra a pasta do projeto.
-3. Abra o arquivo `index.html` no navegador. Para testar os projetos individualmente, abra o `index.html` dentro da pasta correspondente.
+3. Abra `index.html` no navegador. Para ver um projeto específico, abra o `index.html` dentro da pasta dele.
 
-Para publicar o portfólio com GitHub Pages, configure o repositório para servir a branch `main` a partir da pasta raiz.
+## 👋 Sobre mim
 
-## Autor
+**Flávio Oliveira** · Desenvolvedor front-end em evolução contínua.
 
-**Flávio Oliveira**
-
-[GitHub](https://github.com/flaviopoliveira92-byte)
+[GitHub](https://github.com/flaviopoliveira92-byte) · [Ver portfólio](https://flaviopoliveira92-byte.github.io/rockeseat-projetos/?v=e15a70d)
