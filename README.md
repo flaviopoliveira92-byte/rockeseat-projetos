@@ -41,7 +41,7 @@ Os projetos são páginas estáticas e não precisam de etapa de build. O catál
 1. Clone este repositório:
 
    ```bash
-   git clone https://github.com/flaviopoliveira92-byte/rockeseat-projetos.git
+   https://github.com/flaviopoliveira92-byte/rockeseat-projetos.git
    ```
 
 2. Abra a pasta do projeto.
