@@ -89,5 +89,18 @@ window.portfolioProjects = Object.freeze([
     imageAlt: "Vista noturna do porto e da ponte iluminada de Busan",
     imageAltEn: "Busan harbor and illuminated bridge at night",
     href: "./Local%20Tur%C3%ADstico/Index.html"
+  },
+  {
+    id: 8,
+    category: "Convite",
+    categoryEn: "Invitation",
+    title: "Festivite: crie seu convite",
+    titleEn: "Festivite: create your invitation",
+    description: "Crie convites digitais personalizados para celebrar momentos especiais.",
+    descriptionEn: "Create personalized digital invitations for life's special moments.",
+    image: "./Convite/Assets/Background.png",
+    imageAlt: "Fatia de bolo colorido com uma vela acesa para uma festa de aniversário",
+    imageAltEn: "A slice of colorful cake with a lit candle for a birthday celebration",
+    href: "./Convite/index.html"
   }
 ]);

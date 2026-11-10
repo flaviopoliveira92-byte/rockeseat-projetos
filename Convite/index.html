@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#29292d">
+  <meta name="description" content="Crie um convite digital personalizado para o seu evento.">
+  <title>Festivite | Crie seu convite</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Leckerli+One&family=Open+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <script src="../language.js?v=convite-toolbar-v2" data-toolbar-target=".app-shell" data-toolbar-mode="row" data-toolbar-placement="prepend" data-toolbar-style="portfolio" data-toolbar-fixed="true" data-home-url="../?v=e15a70d" defer></script>
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <main class="app-shell">
+    <aside class="brand-panel" aria-label="Festivite">
+      <div class="brand-copy">
+        <img class="brand-logo" src="Assets/Logo.png" alt="">
+        <p class="brand-name">Festivite</p>
+        <p class="brand-tagline">Crie um convite digital para o seu evento</p>
+      </div>
+      <div class="brand-art" aria-hidden="true">
+        <img src="Assets/Background.png" alt="">
+      </div>
+    </aside>
+
+    <section class="form-panel" aria-labelledby="page-title">
+      <form id="invite-form" novalidate>
+        <header class="form-heading">
+          <p class="step-label">UM CONVITE DO SEU JEITO</p>
+          <h1 id="page-title">Crie seu convite</h1>
+          <p>Preencha os detalhes e prepare-se para celebrar.</p>
+        </header>
+
+        <fieldset class="form-section" aria-labelledby="event-legend">
+          <legend id="event-legend"><img class="section-icon" src="Assets/Icons/calendar.png" alt=""> Sobre o evento</legend>
+          <div class="field">
+            <label for="event-title">Título</label>
+            <input id="event-title" name="title" type="text" placeholder="Nome do evento" required autocomplete="off">
+            <small class="field-error" id="title-error"></small>
+          </div>
+          <div class="field-grid">
+            <div class="field">
+              <label for="event-start">Início</label>
+              <input id="event-start" name="start" type="datetime-local" required>
+              <small class="field-error" id="start-error"></small>
+            </div>
+            <div class="field">
+              <label for="event-end">Fim</label>
+              <input id="event-end" name="end" type="datetime-local" required>
+              <small class="field-error" id="end-error"></small>
+            </div>
+          </div>
+          <div class="field-grid event-location-grid">
+            <fieldset class="field type-field">
+              <legend>Tipo</legend>
+              <div class="choice-group" role="radiogroup" aria-label="Tipo de evento">
+                <label class="choice-option is-selected"><input type="radio" name="event-type" value="presencial" checked><img src="Assets/Icons/building-2.png" alt=""> Presencial</label>
+                <label class="choice-option"><input type="radio" name="event-type" value="online"><img src="Assets/Icons/video.png" alt=""> Online</label>
+              </div>
+            </fieldset>
+            <div class="field">
+              <label for="event-location" id="location-label">Local</label>
+              <input id="event-location" name="location" type="text" placeholder="Link ou endereço" required>
+              <small class="field-error" id="location-error"></small>
+            </div>
+          </div>
+          <div class="field">
+            <label for="event-description">Descrição</label>
+            <textarea id="event-description" name="description" rows="4" placeholder="Escreva sobre os detalhes do evento" required></textarea>
+            <small class="field-error" id="description-error"></small>
+          </div>
+        </fieldset>
+
+        <fieldset class="form-section personalization" aria-labelledby="personalization-legend">
+          <legend id="personalization-legend"><img class="section-icon" src="Assets/Icons/paintbrush-vertical.png" alt=""> Personalização</legend>
+          <div class="field">
+            <span class="field-label">Cor principal</span>
+            <div class="color-options" role="radiogroup" aria-label="Cor principal do convite">
+              <label class="color-swatch" style="--swatch:#59b2ff" title="Azul"><input type="radio" name="accent" value="#59b2ff" aria-label="Azul"><span></span></label>
+              <label class="color-swatch" style="--swatch:#6a5cff" title="Roxo"><input type="radio" name="accent" value="#6a5cff" aria-label="Roxo"><span></span></label>
+              <label class="color-swatch" style="--swatch:#b259ff" title="Violeta"><input type="radio" name="accent" value="#b259ff" aria-label="Violeta"><span></span></label>
+              <label class="color-swatch" style="--swatch:#e94cff" title="Rosa"><input type="radio" name="accent" value="#e94cff" aria-label="Rosa"><span></span></label>
+              <label class="color-swatch" style="--swatch:#ff598b" title="Pink"><input type="radio" name="accent" value="#ff598b" aria-label="Pink" checked><span></span></label>
+              <label class="color-swatch" style="--swatch:#ff5959" title="Vermelho"><input type="radio" name="accent" value="#ff5959" aria-label="Vermelho"><span></span></label>
+              <label class="color-swatch" style="--swatch:#ff8259" title="Coral"><input type="radio" name="accent" value="#ff8259" aria-label="Coral"><span></span></label>
+              <label class="color-swatch" style="--swatch:#ffc259" title="Amarelo"><input type="radio" name="accent" value="#ffc259" aria-label="Amarelo"><span></span></label>
+              <label class="color-swatch" style="--swatch:#e5ff59" title="Lima"><input type="radio" name="accent" value="#e5ff59" aria-label="Lima"><span></span></label>
+              <label class="color-swatch" style="--swatch:#59ff91" title="Verde"><input type="radio" name="accent" value="#59ff91" aria-label="Verde"><span></span></label>
+              <label class="color-swatch" style="--swatch:#59fff1" title="Turquesa"><input type="radio" name="accent" value="#59fff1" aria-label="Turquesa"><span></span></label>
+            </div>
+          </div>
+
+          <div class="field">
+            <span class="field-label">Tema do evento</span>
+            <div class="theme-grid" role="radiogroup" aria-label="Tema do evento">
+              <label class="theme-option is-selected"><input type="radio" name="theme" value="Aniversário" data-image="Aniversario.png" checked><img src="Assets/Images/Aniversario.png" alt=""><span>Aniversário</span></label>
+              <label class="theme-option"><input type="radio" name="theme" value="Infantil" data-image="Infantil.png"><img src="Assets/Images/Infantil.png" alt=""><span>Infantil</span></label>
+              <label class="theme-option"><input type="radio" name="theme" value="Formatura" data-image="Formatura.png"><img src="Assets/Images/Formatura.png" alt=""><span>Formatura</span></label>
+              <label class="theme-option"><input type="radio" name="theme" value="Casamento" data-image="Casamento.png"><img src="Assets/Images/Casamento.png" alt=""><span>Casamento</span></label>
+              <label class="theme-option"><input type="radio" name="theme" value="Chá de bebê" data-image="Chadebebe.png"><img src="Assets/Images/Chadebebe.png" alt=""><span>Chá de bebê</span></label>
+              <label class="theme-option"><input type="radio" name="theme" value="Chá de panela" data-image="Panela.png"><img src="Assets/Images/Panela.png" alt=""><span>Chá de panela</span></label>
+              <label class="theme-option"><input type="radio" name="theme" value="Carnaval" data-image="Carnaval.png"><img src="Assets/Images/Carnaval.png" alt=""><span>Carnaval</span></label>
+              <label class="theme-option"><input type="radio" name="theme" value="Páscoa" data-image="Pascoa.png"><img src="Assets/Images/Pascoa.png" alt=""><span>Páscoa</span></label>
+              <label class="theme-option"><input type="radio" name="theme" value="São João" data-image="SãoJoão.png"><img src="Assets/Images/SãoJoão.png" alt=""><span>São João</span></label>
+              <label class="theme-option"><input type="radio" name="theme" value="Halloween" data-image="Halloween.png"><img src="Assets/Images/Halloween.png" alt=""><span>Halloween</span></label>
+              <label class="theme-option"><input type="radio" name="theme" value="Natal" data-image="Natal.png"><img src="Assets/Images/Natal.png" alt=""><span>Natal</span></label>
+              <label class="theme-option"><input type="radio" name="theme" value="Outro" data-image="Outro.png"><img src="Assets/Images/Outro.png" alt=""><span>Outro</span></label>
+            </div>
+          </div>
+
+          <div class="field-grid style-cover-grid">
+            <div class="field style-field">
+              <span class="field-label">Estilo</span>
+              <label class="theme-switch"><input id="dark-style" name="style" type="checkbox"><span class="switch-track"></span><span id="style-label">Claro</span></label>
+            </div>
+            <div class="field cover-field">
+              <span class="field-label">Foto de capa</span>
+              <label class="upload-button" for="cover-image"><span aria-hidden="true">↥</span> Selecionar</label>
+              <input class="visually-hidden" id="cover-image" name="cover" type="file" accept="image/*">
+              <span class="file-name" id="file-name">Nenhum arquivo selecionado</span>
+              <small class="field-error" id="cover-error"></small>
+            </div>
+          </div>
+        </fieldset>
+
+        <fieldset class="form-section contact-section" aria-labelledby="contact-legend">
+          <legend id="contact-legend"><img src="Assets/Icons/contact.png" alt="" class="section-icon"> Dados para contato</legend>
+          <div class="field">
+            <label for="contact-name">Nome</label>
+            <input id="contact-name" name="contactName" type="text" placeholder="Nome completo" autocomplete="name" required>
+            <small class="field-error" id="contact-name-error"></small>
+          </div>
+          <div class="field-grid">
+            <div class="field">
+              <label for="contact-email">E-mail</label>
+              <input id="contact-email" name="email" type="email" placeholder="exemplo@email.com" autocomplete="email" required>
+              <small class="field-error" id="email-error"></small>
+            </div>
+            <div class="field">
+              <label for="contact-phone">Telefone</label>
+              <input id="contact-phone" name="phone" type="tel" placeholder="(99) 99999-9999" autocomplete="tel" required>
+              <small class="field-error" id="phone-error"></small>
+            </div>
+          </div>
+        </fieldset>
+
+        <div class="form-footer">
+          <div class="consent-list">
+            <label class="check-row required-consent"><input id="terms" name="terms" type="checkbox" required><span>Li e concordo com os <a href="#termos">Termos e Condições</a> e com a <a href="#privacidade">Política de Privacidade</a></span></label>
+            <small class="field-error" id="terms-error"></small>
+            <label class="check-row"><input type="checkbox" name="emailUpdates"><span>Aceito receber atualizações e promoções por e-mail</span></label>
+            <label class="check-row"><input type="checkbox" name="smsUpdates"><span>Aceito receber atualizações e promoções por SMS</span></label>
+          </div>
+          <button class="submit-button" type="submit"><span aria-hidden="true">▣</span> Gerar convite</button>
+        </div>
+        <p class="form-status" id="form-status" role="status" aria-live="polite"></p>
+      </form>
+    </section>
+  </main>
+
+  <dialog class="invite-dialog" id="invite-dialog" aria-labelledby="invite-title">
+    <button class="dialog-close" type="button" aria-label="Fechar convite">×</button>
+    <article class="invite-card" id="invite-card">
+      <div class="invite-cover" id="invite-cover"><span id="invite-theme">Aniversário</span></div>
+      <div class="invite-details">
+        <p class="invite-eyebrow">VOCÊ ESTÁ CONVIDADO(A)</p>
+        <h2 id="invite-title">Seu evento</h2>
+        <p id="invite-description"></p>
+        <dl>
+          <div><dt>Data</dt><dd id="invite-date"></dd></div>
+          <div><dt>Local</dt><dd id="invite-location"></dd></div>
+        </dl>
+        <p class="invite-host">Com carinho, <strong id="invite-host"></strong></p>
+      </div>
+    </article>
+    <div class="dialog-actions">
+      <button class="copy-button" id="copy-invite" type="button">Copiar convite</button>
+      <button class="share-button" id="share-invite" type="button">Compartilhar</button>
+    </div>
+    <p class="dialog-note" id="dialog-note" aria-live="polite">Seu convite está pronto para compartilhar.</p>
+  </dialog>
+</body>
+</html>
